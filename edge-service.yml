@@ -1,5 +1,5 @@
-server:
-  port: ${PORT:8086}
+# server:
+#   port: ${PORT:8086}
   # ssl:
   #   key-store: ${HOME}/dev/keystore.p12
   #   key-store-password: starbucks
@@ -14,28 +14,28 @@ zuul:
     demo:
       path: /quote/**
       url: forward:/quotorama
-    user:
-      path: /user/**
-      url: http://localhost:9999/uaa/user
+    # user:
+    #   path: /user/**
+    #   url: http://localhost:9999/uaa/user
     # wx:
     #   path: /weather/**
     #   url: forward:http://api.openweathermap.org/data/2.5/find
 
 spring:
-  rabbitmq:
-    host: localhost
-  redis:
-    host: localhost
-    port: 6379
+  # rabbitmq:
+  #   host: localhost
+  # redis:
+  #   host: localhost
+  #   port: 6379
   cloud:
     stream:
       bindings:
         output:
           destination: test
-  zipkin:
-    host: localhost
-    port: 9411
-    base-url: http://localhost:9411
+  # zipkin:
+  #   host: localhost
+  #   port: 9411
+  #   base-url: http://localhost:9411
 
 # security:
 #   user:
